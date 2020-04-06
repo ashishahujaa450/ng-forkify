@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><img src="assets/imgs/logo.png" alt="" /></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <form
+      class="form-inline my-2 my-lg-0 mx-auto"
+      #searchForm="ngForm"
+      (ngSubmit)="onSearch(searchForm)"
+    >
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Search recipes..."
+        aria-label="Search"
+        ngModel
+        required
+        name="recipeName"
+      />
+      <button class="btn btn-success my-2 my-sm-0" type="submit">
+        Search
+      </button>
+    </form>
+  </div>
+</nav>

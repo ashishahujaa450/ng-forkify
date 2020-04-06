@@ -1,0 +1,10 @@
+<li class="shopping__item">
+  <div class="shopping__count">
+    <input type="number" value="{{ selectedItem.amount }}" />
+    <p>{{ selectedItem.unit }}</p>
+  </div>
+  <p class="shopping__description">{{ selectedItem.description }}</p>
+  <button class="btn btn-danger btn-sm mr-3 mt-2" (click)="removeIng()">
+    X
+  </button>
+</li>

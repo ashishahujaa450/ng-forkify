@@ -1,0 +1,31 @@
+<ul class="result__list">
+  <app-recipe-list-item
+    *ngFor="let item of recipeListing; let i = index"
+    [item]="item"
+    [index]="i"
+  ></app-recipe-list-item>
+
+  <p *ngIf="isDataArrived">Loading...</p>
+
+  <div
+    class="d-flex justify-content-between px-3"
+    *ngIf="recipeListing.length > 0"
+  >
+    <button
+      type="button"
+      class="btn btn-info"
+      (click)="onPrev()"
+      [ngClass]="{ hide: page === 0 }"
+    >
+      Prev
+    </button>
+    <button
+      type="button"
+      class="btn btn-info"
+      (click)="onNext()"
+      [ngClass]="{ hide: page === 2 }"
+    >
+      Next
+    </button>
+  </div>
+</ul>

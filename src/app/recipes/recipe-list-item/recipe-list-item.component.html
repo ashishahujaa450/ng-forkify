@@ -1,0 +1,16 @@
+<li>
+  <a
+    class="results__link results__link--active"
+    [routerLink]="index"
+    routerLinkActive="actie"
+    queryParamsHandling="preserve"
+  >
+    <figure class="results__fig">
+      <img src="{{ item.image }}" alt="{{ item.label }}" />
+    </figure>
+    <div class="results__data">
+      <h4 class="results__name">{{ item.label }}</h4>
+      <p class="results__author">{{ item.source }}</p>
+    </div>
+  </a>
+</li>
